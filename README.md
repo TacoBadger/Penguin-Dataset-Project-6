@@ -185,7 +185,7 @@ We can make a plot for this one.
 sns.countplot('species',data=penguin, palette=('Orange', 'Pink', 'Blue'))
 plt.show()
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/species%20count.png?raw=true)
 
 The penguins dataset has different number of samples for each species. **Adelie are the highest number followed by Gentoo and Chinstrap.**
 
@@ -198,7 +198,7 @@ We can also plot a bar chart for this one.
 ```bash 
 sns.countplot(x = "island", data = penguin)
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/island.png?raw=true)
 
 **Most of the Penguins belong to Biscoe island and least are from Torgersen.**
 
@@ -209,7 +209,7 @@ First let's start with culmen length.
 ```bash 
 sns.catplot(x="sex", y="culmen_length_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/culmen%20length.png?raw=true)
 
 **Chinstrap penguins have highest culmen length in both male and female followed by Gentoo and Adelie.**
 
@@ -218,7 +218,7 @@ Then let's check out culmen depth.
 ```bash 
 sns.catplot(x="sex", y="culmen_depth_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/culmen%20depth.png?raw=true)
 
 **Chinstrap and Adelie penguins have almost same culmen depth in both male and female while Gentoo has the lowest.**
 
@@ -228,7 +228,7 @@ Let us check the relationship of between the culmen_length and culmen_depth!
 ```bash 
 sns.scatterplot(x = penguin.culmen_length_mm, y = penguin.culmen_depth_mm, hue = penguin.species, palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/scatterplot%20relationship.png?raw=true)
 
 **From the scatter plot above we can see that:**
 
@@ -241,14 +241,14 @@ Let's find out the Flipper Length and Body Mass among penguins.
 ```bash 
 sns.catplot(x="sex", y="flipper_length_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/flipper%20length.png?raw=true)
 
 **Gentoo penguins have highest flipper length in both male and female.**
 
 ```bash 
 sns.catplot(x="sex", y="body_mass_g", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/body%20mass.png?raw=true)
 
 **Gentoo penguins have highest body weight in both male and female.**
 
@@ -257,7 +257,7 @@ And lastly we will analyze the mass of the species.
 ```bash 
 sns.boxplot(x = penguin.sex, y = penguin.body_mass_g, hue = penguin.species, palette=('Orange', 'Pink', 'Blue'))
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Viz/boxplot.png?raw=true)
 
 **From the box plot above we can see that:**
 
