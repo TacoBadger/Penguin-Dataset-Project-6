@@ -89,8 +89,32 @@ We will have a look at the first 5 rows of the dataset.
 ```bash 
 penguin.head(5)
 ```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/penguin.png?raw=true)
 
 We will have a look at the last 5 rows of the dataset.
+
 ```bash 
 penguin.tail(5)
 ```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/penguin.png?raw=true)
+
+We can also take a look at the summary of the dataset, which includes number of rows and columns.
+```bash 
+penguin.shape
+```
+**The dataset has a total of 344 rows and 7 columns.**
+
+We can also take a peak at column names.
+```bash 
+penguin.columns
+```
+
+**The dataset consists of 7 columns.**
+
+- species: penguin species (Chinstrap, Adélie, or Gentoo)
+- island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago (Antarctica)
+- culmen_length_mm: culmen length (mm)
+- culmen_depth_mm: culmen depth (mm)
+- flipper_length_mm: flipper length (mm)
+- vbody_mass_g: body mass (g)
+- sex: penguin sex
