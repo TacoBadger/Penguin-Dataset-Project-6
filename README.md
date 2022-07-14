@@ -118,3 +118,54 @@ penguin.columns
 - flipper_length_mm: flipper length (mm)
 - vbody_mass_g: body mass (g)
 - sex: penguin sex
+
+## Processing the data for analysis
+We will fix null values and check for datatypes. 
+
+We can also check for the datatypes, nullvalues and columns.
+```bash 
+penguin.info()
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/datatypes.png?raw=true)
+
+We can also check for null values in the dataset.
+```bash 
+penguin.isna().sum()
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null.png?raw=true)
+
+In penguin data set, there are **7 columns and 344 rows**. There are few null values present in **culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g and sex** columns.
+
+We can fill in the missing values like the length and depth with the mean.
+```bash 
+penguin["culmen_length_mm"] = penguin["culmen_length_mm"].fillna(value = penguin["culmen_length_mm"].mean())
+penguin["culmen_depth_mm"] = penguin["culmen_depth_mm"].fillna(value = penguin["culmen_depth_mm"].mean())
+penguin["flipper_length_mm"] = penguin["flipper_length_mm"].fillna(value = penguin["flipper_length_mm"].mean())
+penguin["body_mass_g"] = penguin["body_mass_g"].fillna(value = penguin["body_mass_g"].mean())
+```
+
+Let us work on missing values and let us see what we can do with it.
+```bash 
+penguin['sex'] = penguin['sex'].fillna('MALE')
+penguin[penguin['sex']=='.']
+```
+
+```bash 
+penguin.loc[336,'sex'] = 'MALE'
+```
+
+This adds a male to the missing sex in row 336.
+
+Let's check if there are anymore missing values.
+
+```bash 
+penguin.isna().sum()
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Congrats!** There are **no null values** in the data set now. So we can go ahead and **work on EDA!**
+
+## Checking the Dataset with Data Visualizations
+We will now do further EDA on the dataset we cleaned and processed.
+
+Checking the dataset stats.
