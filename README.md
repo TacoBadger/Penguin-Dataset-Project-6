@@ -60,7 +60,7 @@ We will use the following packages:
 - **seaborn** *is a library that uses Matplotlib underneath to plot graphs. It will be used to visualize random distributions.*
 - **matplotlib** *is a cross-platform, data visualization and graphical plotting library for Python and its numerical extension NumPy. As such, it offers a viable open source alternative to MATLAB.*
 
-# ## Importing the packages
+## Importing the packages
 We will import all the packages that we need to load the dataset and create our visualization.
 
 ```bash 
@@ -77,3 +77,20 @@ warnings.filterwarnings('ignore')
 **Pandas and numpy** for EDA, **Seaborn and matplotlib** for data viz.
 
 The **filter warnings** is just to ignore the red text boxes when running an output.
+
+**Load the dataset**
+
+```bash 
+penguin = pd.read_csv("../input/palmer-archipelago-antarctica-penguin-data/penguins_size.csv")
+```
+
+We will have a look at the first 5 rows of the dataset.
+
+```bash 
+penguin.head(5)
+```
+
+We will have a look at the last 5 rows of the dataset.
+```bash 
+penguin.tail(5)
+```
