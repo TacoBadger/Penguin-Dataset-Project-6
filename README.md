@@ -169,3 +169,131 @@ penguin.isna().sum()
 We will now do further EDA on the dataset we cleaned and processed.
 
 Checking the dataset stats.
+```bash 
+penguin.describe()
+```
+
+Let's check count for each species.
+```bash 
+penguin['species'].value_counts()
+```
+
+The penguin dataset consists of **344 data instances**. There are **3 classes(species) - Adelie, Gentoo and Chinstrap.**
+
+We can make a plot for this one.
+```bash 
+sns.countplot('species',data=penguin, palette=('Orange', 'Pink', 'Blue'))
+plt.show()
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+The penguins dataset has different number of samples for each species. **Adelie are the highest number followed by Gentoo and Chinstrap.**
+
+Let's also check the island names and how many penguins are there in each island.
+```bash 
+penguin['island'].value_counts()
+```
+
+We can also plot a bar chart for this one.
+```bash 
+sns.countplot(x = "island", data = penguin)
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Most of the Penguins belong to Biscoe island and least are from Torgersen.**
+
+## Analysis of Culmen Length and Depth in penguins
+Let's find out the culmmen length and culmen depth among penguins.
+
+First let's start with culmen length.
+```bash 
+sns.catplot(x="sex", y="culmen_length_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Chinstrap penguins have highest culmen length in both male and female followed by Gentoo and Adelie.**
+
+Then let's check out culmen depth.
+
+```bash 
+sns.catplot(x="sex", y="culmen_depth_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Chinstrap and Adelie penguins have almost same culmen depth in both male and female while Gentoo has the lowest.**
+
+## Relationship between culmen length and culmen depth
+Let us check the relationship of between the culmen_length and culmen_depth!
+
+```bash 
+sns.scatterplot(x = penguin.culmen_length_mm, y = penguin.culmen_depth_mm, hue = penguin.species, palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**From the scatter plot above we can see that:**
+
+- 3 groups of species can be identified based on culmen length and depth feature
+- Each of the species culmen_length and culmen_depth fall in a certain range.
+
+## Analysis of Flipper Length and Body Mass in penguins
+Let's find out the Flipper Length and Body Mass among penguins.
+
+```bash 
+sns.catplot(x="sex", y="flipper_length_mm", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Gentoo penguins have highest flipper length in both male and female.**
+
+```bash 
+sns.catplot(x="sex", y="body_mass_g", hue="species", data=penguin, kind="bar", palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**Gentoo penguins have highest body weight in both male and female.**
+
+And lastly we will analyze the mass of the species.
+
+```bash 
+sns.boxplot(x = penguin.sex, y = penguin.body_mass_g, hue = penguin.species, palette=('Orange', 'Pink', 'Blue'))
+```
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/EDA/null1.png?raw=true)
+
+**From the box plot above we can see that:**
+
+- Male penguins of all species are heavier than female penguins.
+- Gentoo penguins are heavier than Adelie and Chinstrap penguins.
+
+## In Summary
+
+We can see that penguins may differ with their culmen length and depth and especially their body mass, let's summarize everything we found out.
+
+**Regarding the analysis of Culmen Length and Depth in penguins**
+- Chinstrap penguins have highest culmen length in both male and female followed by Gentoo and Adelie.
+- Chinstrap and Adelie penguins have almost same culmen depth in both male and female while Gentoo has the lowest.
+
+**Regarding the relationship between culmen_length and culmen_depth**
+- 3 groups of species can be identified based on culmen length and depth feature
+- Each of the species culmen_length and culmen_depth fall in a certain range.
+
+**Based on the analysis of Flipper Length and Body Mass in penguins**
+- Gentoo penguins have highest flipper length in both male and female.
+- Gentoo penguins have highest body weight in both male and female.
+
+**And lastly regarding the analysis of mass with respective of species**
+- Male penguins of all species are heavier than female penguins.
+- Gentoo penguins are heavier than Adelie and Chinstrap penguins.
+
+## Explore our Tableau Public
+- [@TacoBadger](https://public.tableau.com/app/profile/taco.badger)
+
+## Explore our Notebook
+- [@TacoBadger](https://www.kaggle.com/code/cryptocosy/penguin-analysis)
+
+## What is Next?
+We have finished our practice! This dataset was the most interesting and fun out of all the dataset I worked with.
+- I could have also improved my analysis by adding more relationships or correlations of different values.
+- I could also practice more types of plot regarding the additional analysis.
+- I can also need to learn more advanced functions about plots for the next practice.
+
+Thank you for reading my kernel or repositories!
