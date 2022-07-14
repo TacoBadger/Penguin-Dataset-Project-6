@@ -89,14 +89,14 @@ We will have a look at the first 5 rows of the dataset.
 ```bash 
 penguin.head(5)
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/penguin.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Tables/head.png?raw=true)
 
 We will have a look at the last 5 rows of the dataset.
 
 ```bash 
 penguin.tail(5)
 ```
-![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/penguin.png?raw=true)
+![](https://github.com/TacoBadger/Penguin-Dataset/blob/main/Tables/tail.png?raw=true)
 
 We can also take a look at the summary of the dataset, which includes number of rows and columns.
 ```bash 
