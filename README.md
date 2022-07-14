@@ -28,7 +28,6 @@ We will do some data visualization with data analysis about the penguin dataset 
 - Matplotlib (Data Visualization)
 
 ## Dataset
-
 Here is the dataset used: [Palmer Archipelago (Antarctica) penguin data](https://www.kaggle.com/datasets/parulpandey/palmer-archipelago-antarctica-penguin-data)
 
 Palmer Archipelago (Antarctica) penguin data
@@ -40,3 +39,41 @@ License & citation
 Data are available by CC-0 license in accordance with the Palmer Station LTER Data Policy and the LTER Data Access Policy for Type I data.
 
 Please cite this data using: Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081. [doi:10.1371/journal.pone.0090081](doi:10.1371/journal.pone.0090081).
+
+## Summary
+The data folder contains two CSV files. For intro courses/examples, you probably want to use the first one (penguins_size.csv).
+- penguins_size.csv: Simplified data from original penguin data sets. Contains variables:
+- species: penguin species (Chinstrap, Adélie, or Gentoo)
+- culmen_length_mm: culmen length (mm)
+- culmen_depth_mm: culmen depth (mm)
+- flipper_length_mm: flipper length (mm)
+- body_mass_g: body mass (g)
+- island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago (Antarctica)
+- sex: penguin sex
+
+## Important Definitions
+**Python**  is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn't specialized for any specific problems.
+
+We will use the following packages:
+- **pandas** *is mainly used for data analysis and associated manipulation of tabular data in Dataframes.*
+- **numpy** *a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourier transform, and matrices.*
+- **seaborn** *is a library that uses Matplotlib underneath to plot graphs. It will be used to visualize random distributions.*
+- **matplotlib** *is a cross-platform, data visualization and graphical plotting library for Python and its numerical extension NumPy. As such, it offers a viable open source alternative to MATLAB.*
+
+# ## Importing the packages
+We will import all the packages that we need to load the dataset and create our visualization.
+
+```bash 
+import pandas as pd 
+import numpy as np
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+%matplotlib inline
+
+import warnings
+warnings.filterwarnings('ignore')
+```
+
+**Pandas and numpy** for EDA, **Seaborn and matplotlib** for data viz.
+
+The **filter warnings** is just to ignore the red text boxes when running an output.
