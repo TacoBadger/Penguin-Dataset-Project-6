@@ -296,4 +296,4 @@ We have finished our practice! This dataset was the most interesting and fun out
 - I could also practice more types of plot regarding the additional analysis.
 - I can also need to learn more advanced functions about plots for the next practice.
 
-Thank you for reading my kernel or repositories!
+Thank you for reading my case study!
